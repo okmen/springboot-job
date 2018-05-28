@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.web.ajdatasynweb.zhujian.mapper.ZhuHouseCentralizationTempMapper" >
+  <resultMap id="ZhuHouseCentralizationTempResultMap" type="cn.web.ajdatasynweb.entity.HouseCentralizationTemp" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="project_id" property="projectId" jdbcType="VARCHAR" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="project_name" property="projectName" jdbcType="VARCHAR" />
+    <result column="community_id" property="communityId" jdbcType="VARCHAR" />
+    <result column="community_name" property="communityName" jdbcType="VARCHAR" />
+    <result column="build_id" property="buildId" jdbcType="VARCHAR" />
+    <result column="build_name" property="buildName" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="district" property="district" jdbcType="VARCHAR" />
+    <result column="street_address" property="streetAddress" jdbcType="VARCHAR" />
+    <result column="street_num" property="streetNum" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="video" property="video" jdbcType="VARCHAR" />
+    <result column="cover_image" property="coverImage" jdbcType="VARCHAR" />
+    <result column="detail_images" property="detailImages" jdbcType="VARCHAR" />
+    <result column="longitude" property="longitude" jdbcType="VARCHAR" />
+    <result column="latitude" property="latitude" jdbcType="VARCHAR" />
+    <result column="total_room" property="totalRoom" jdbcType="INTEGER" />
+    <result column="available_room" property="availableRoom" jdbcType="INTEGER" />
+    <result column="facility" property="facility" jdbcType="VARCHAR" />
+    <result column="total_area" property="totalArea" jdbcType="DOUBLE" />
+    <result column="inner_area" property="innerArea" jdbcType="DOUBLE" />
+    <result column="total_building" property="totalBuilding" jdbcType="INTEGER" />
+    <result column="is_lift" property="isLift" jdbcType="TINYINT" />
+    <result column="max_floor" property="maxFloor" jdbcType="INTEGER" />
+    <result column="contact_iphone" property="contactIphone" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="contract" property="contract" jdbcType="VARCHAR" />
+    <result column="owner_idcard_name" property="ownerIdcardName" jdbcType="VARCHAR" />
+    <result column="owner_idcard_no" property="ownerIdcardNo" jdbcType="VARCHAR" />
+    <result column="owner_idcard_front" property="ownerIdcardFront" jdbcType="VARCHAR" />
+    <result column="owner_idcard_back" property="ownerIdcardBack" jdbcType="VARCHAR" />
+    <result column="house_poc_code" property="housePocCode" jdbcType="VARCHAR" />
+    <result column="house_poc_Img" property="housePocImg" jdbcType="VARCHAR" />
+    <result column="fire_license_code" property="fireLicenseCode" jdbcType="VARCHAR" />
+    <result column="fire_license_Img" property="fireLicenseImg" jdbcType="VARCHAR" />
+    <result column="register_id" property="registerId" jdbcType="INTEGER" />
+    <result column="seller_id" property="sellerId" jdbcType="INTEGER" />
+    <result column="audit_status" property="auditStatus" jdbcType="INTEGER" />
+    <result column="qualification_status" property="qualificationStatus" jdbcType="INTEGER" />
+    <result column="qualification_reason" property="qualificationReason" jdbcType="VARCHAR" />
+    <result column="qualification_time" property="qualificationTime" jdbcType="TIMESTAMP" />
+    <result column="backups_time" property="backupsTime" jdbcType="TIMESTAMP" />
+    <result column="is_backups" property="isBackups" jdbcType="INTEGER" />
+    <result column="extend_info" property="extendInfo" jdbcType="LONGVARCHAR" />
+  </resultMap> 
+  <sql id="ZhuHouseCentralizationTempResultMap_Column_List" >
+    id, project_id, source, project_name, community_id, community_name, build_id, build_name, extend_info,
+    city, district, street_address, street_num, address, video, cover_image, detail_images, 
+    longitude, latitude, total_room, available_room, facility, total_area, inner_area, 
+    total_building, is_lift, max_floor, contact_iphone, create_time, update_time, contract, 
+    owner_idcard_name, owner_idcard_no, owner_idcard_front, owner_idcard_back, house_poc_code, 
+    house_poc_Img, fire_license_code, fire_license_Img, register_id, seller_id, audit_status, 
+    qualification_status, qualification_reason, qualification_time, backups_time, is_backups
+  </sql>
+  <!-- 添加HouseCentralizationTemp对象 -->
+   <insert id="insertHouseCentralizationTemp" parameterType="cn.web.ajdatasynweb.entity.HouseCentralizationTemp" >
+    insert into `ajdataback`.`house_centralization_temp` (project_id, source, 
+      project_name, community_id, community_name, 
+      build_id, build_name, city, 
+      district, street_address, street_num, 
+      address, video, cover_image, 
+      detail_images, longitude, latitude, 
+      total_room, available_room, facility, 
+      total_area, inner_area, total_building, 
+      is_lift, max_floor, contact_iphone, 
+      create_time, update_time, contract, 
+      owner_idcard_name, owner_idcard_no, owner_idcard_front, 
+      owner_idcard_back, house_poc_code, house_poc_Img, 
+      fire_license_code, fire_license_Img, register_id, 
+      seller_id, audit_status, qualification_status, 
+      qualification_reason, qualification_time, 
+      backups_time, is_backups, extend_info
+      )
+    values ( #{projectId,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 
+      #{projectName,jdbcType=VARCHAR}, #{communityId,jdbcType=VARCHAR}, #{communityName,jdbcType=VARCHAR}, 
+      #{buildId,jdbcType=VARCHAR}, #{buildName,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{district,jdbcType=VARCHAR}, #{streetAddress,jdbcType=VARCHAR}, #{streetNum,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{video,jdbcType=VARCHAR}, #{coverImage,jdbcType=VARCHAR}, 
+      #{detailImages,jdbcType=VARCHAR}, #{longitude,jdbcType=VARCHAR}, #{latitude,jdbcType=VARCHAR}, 
+      #{totalRoom,jdbcType=INTEGER}, #{availableRoom,jdbcType=INTEGER}, #{facility,jdbcType=VARCHAR}, 
+      #{totalArea,jdbcType=DOUBLE}, #{innerArea,jdbcType=DOUBLE}, #{totalBuilding,jdbcType=INTEGER}, 
+      #{isLift,jdbcType=TINYINT}, #{maxFloor,jdbcType=INTEGER}, #{contactIphone,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{contract,jdbcType=VARCHAR}, 
+      #{ownerIdcardName,jdbcType=VARCHAR}, #{ownerIdcardNo,jdbcType=VARCHAR}, #{ownerIdcardFront,jdbcType=VARCHAR}, 
+      #{ownerIdcardBack,jdbcType=VARCHAR}, #{housePocCode,jdbcType=VARCHAR}, #{housePocImg,jdbcType=VARCHAR}, 
+      #{fireLicenseCode,jdbcType=VARCHAR}, #{fireLicenseImg,jdbcType=VARCHAR}, #{registerId,jdbcType=INTEGER}, 
+      #{sellerId,jdbcType=INTEGER}, #{auditStatus,jdbcType=INTEGER}, #{qualificationStatus,jdbcType=INTEGER}, 
+      #{qualificationReason,jdbcType=VARCHAR}, #{qualificationTime,jdbcType=TIMESTAMP}, 
+      #{backupsTime,jdbcType=TIMESTAMP}, #{isBackups,jdbcType=INTEGER}, #{extendInfo,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+</mapper>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.web.ajdatasynweb.chudao.mapper.ChuHouseTypesRoomTempMapper" >
+  <resultMap id="HouseTypesRoomTempResultMap" type="cn.web.ajdatasynweb.entity.HouseTypesRoomTemp" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="room_id" property="roomId" jdbcType="VARCHAR" />
+    <result column="types_id" property="typesId" jdbcType="INTEGER" />
+    <result column="room_type_id" property="roomTypeId" jdbcType="VARCHAR" />
+    <result column="room_name" property="roomName" jdbcType="VARCHAR" />
+    <result column="house_id" property="houseId" jdbcType="VARCHAR" />
+    <result column="house_name" property="houseName" jdbcType="VARCHAR" />
+    <result column="room_area" property="roomArea" jdbcType="DOUBLE" />
+    <result column="building_name" property="buildingName" jdbcType="VARCHAR" />
+    <result column="floor" property="floor" jdbcType="INTEGER" />
+    <result column="rent_price" property="rentPrice" jdbcType="DOUBLE" />
+    <result column="room_status" property="roomStatus" jdbcType="INTEGER" />
+    <result column="is_free_deposit" property="isFreeDeposit" jdbcType="VARCHAR" />
+    <result column="pay_deposit" property="payDeposit" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="pay_period" property="payPeriod" jdbcType="VARCHAR" />
+    <result column="deposit_mode" property="depositMode" jdbcType="VARCHAR" />
+    <result column="rental_demand" property="rentalDemand" jdbcType="VARCHAR" />
+    <result column="sign_status" property="signStatus" jdbcType="INTEGER" />
+    <result column="sign_time" property="signTime" jdbcType="TIMESTAMP" />
+    <result column="backups_time" property="backupsTime" jdbcType="TIMESTAMP" />
+    <result column="is_backups" property="isBackups" jdbcType="INTEGER" />
+    <result column="towards" property="towards" jdbcType="LONGVARCHAR" />
+  </resultMap> 
+  <sql id="HouseTypesRoomTempResultMap_Column_List" >
+    id, room_id, types_id, room_type_id, room_name, house_id, house_name, room_area, towards,
+    building_name, floor, rent_price, room_status, is_free_deposit, pay_deposit, create_time, 
+    update_time, pay_period, deposit_mode, rental_demand, sign_status, sign_time, backups_time, 
+    is_backups
+  </sql>
+   <!-- 查询所有对象的集合 -->
+  <select id="queryHouseTypesRoomTempAll" resultMap="HouseTypesRoomTempResultMap" >
+    select 
+    <include refid="HouseTypesRoomTempResultMap_Column_List" />
+    from `szaj_house`.`house_types_room_temp`
+  </select>
+  <!-- 查询所有对象的总数 -->
+  <select id="queryHouseTypesRoomTempTotal" resultType="java.lang.Integer">
+    select   count(1)
+    from `szaj_house`.`house_types_room_temp` 
+  </select>
+  <!-- 删除单个对象 -->
+  <delete id="deleteHouseTypesRoomTempById" parameterType="cn.web.ajdatasynweb.entity.HouseTypesRoomTemp">
+  	delete from 
+  		`szaj_house`.`house_types_room_temp`
+  	where  id=#{id}  
+  </delete>
+</mapper>

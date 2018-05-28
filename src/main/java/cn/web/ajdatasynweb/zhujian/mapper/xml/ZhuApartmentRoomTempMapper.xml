@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.web.ajdatasynweb.zhujian.mapper.ZhuApartmentRoomTempMapper" >
+  <resultMap id="ZhuApartmentRoomTempResultMap" type="cn.web.ajdatasynweb.entity.ApartmentRoomTemp" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="areaid" property="areaid" jdbcType="VARCHAR" />
+    <result column="room_name" property="roomName" jdbcType="VARCHAR" />
+    <result column="room_type_id" property="roomTypeId" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="DOUBLE" />
+    <result column="building_name" property="buildingName" jdbcType="VARCHAR" />
+    <result column="floor" property="floor" jdbcType="VARCHAR" />
+    <result column="rent" property="rent" jdbcType="DOUBLE" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="pay_method" property="payMethod" jdbcType="VARCHAR" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="house_code" property="houseCode" jdbcType="VARCHAR" />
+    <result column="room_type" property="roomType" jdbcType="INTEGER" />
+    <result column="sign_status" property="signStatus" jdbcType="INTEGER" />
+    <result column="sign_time" property="signTime" jdbcType="TIMESTAMP" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="shelves_time" property="shelvesTime" jdbcType="TIMESTAMP" />
+    <result column="off_shelves_time" property="offShelvesTime" jdbcType="TIMESTAMP" />
+    <result column="backups_time" property="backupsTime" jdbcType="TIMESTAMP" />
+    <result column="is_backups" property="isBackups" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="ZhuApartmentRoomTempResultMap_Column_List" >
+    id, areaid, room_name, room_type_id, area, building_name, floor, rent, status, pay_method, 
+    source, house_code, room_type, sign_status, sign_time, create_time, update_time, 
+    shelves_time, off_shelves_time, backups_time, is_backups
+  </sql>
+   <!-- 添加ApartmentRoomTemp对象 -->
+   <insert id="insertApartmentRoomTemp" parameterType="cn.web.ajdatasynweb.entity.ApartmentRoomTemp" >
+    insert into `ajdataback`.`apartment_room_temp` (areaid, room_name, 
+      room_type_id, area, building_name, 
+      floor, rent, status, 
+      pay_method, source, house_code, 
+      room_type, sign_status, sign_time, 
+      create_time, update_time, shelves_time, 
+      off_shelves_time, backups_time, is_backups
+      )
+    values (#{areaid,jdbcType=VARCHAR}, #{roomName,jdbcType=VARCHAR}, 
+      #{roomTypeId,jdbcType=VARCHAR}, #{area,jdbcType=DOUBLE}, #{buildingName,jdbcType=VARCHAR}, 
+      #{floor,jdbcType=VARCHAR}, #{rent,jdbcType=DOUBLE}, #{status,jdbcType=INTEGER}, 
+      #{payMethod,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{houseCode,jdbcType=VARCHAR}, 
+      #{roomType,jdbcType=INTEGER}, #{signStatus,jdbcType=INTEGER}, #{signTime,jdbcType=TIMESTAMP}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{shelvesTime,jdbcType=TIMESTAMP}, 
+      #{offShelvesTime,jdbcType=TIMESTAMP}, #{backupsTime,jdbcType=TIMESTAMP}, #{isBackups,jdbcType=INTEGER}
+      )
+  </insert>
+</mapper>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.web.ajdatasynweb.chudao.mapper.ChuHouseApartmentTempMapper" >
+  <resultMap id="ChuHouseApartmentTempResultMap" type="cn.web.ajdatasynweb.entity.HouseApartmentTemp" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="project_id" property="projectId" jdbcType="VARCHAR" />
+    <result column="projectNmae" property="projectnmae" jdbcType="VARCHAR" />
+    <result column="room_type_id" property="roomTypeId" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="district" property="district" jdbcType="VARCHAR" />
+    <result column="street_address" property="streetAddress" jdbcType="VARCHAR" />
+    <result column="street_num" property="streetNum" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="longitude" property="longitude" jdbcType="VARCHAR" />
+    <result column="latitude" property="latitude" jdbcType="VARCHAR" />
+    <result column="available_room" property="availableRoom" jdbcType="INTEGER" />
+    <result column="minPrice" property="minprice" jdbcType="INTEGER" />
+    <result column="maxPrice" property="maxprice" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="cover" property="cover" jdbcType="VARCHAR" />
+    <result column="structure" property="structure" jdbcType="VARCHAR" />
+    <result column="area" property="area" jdbcType="DOUBLE" />
+    <result column="towards" property="towards" jdbcType="VARCHAR" />
+    <result column="tag" property="tag" jdbcType="VARCHAR" />
+    <result column="video" property="video" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="create_user_id" property="createUserId" jdbcType="INTEGER" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="update_user_id" property="updateUserId" jdbcType="INTEGER" />
+    <result column="shelves_time" property="shelvesTime" jdbcType="TIMESTAMP" />
+    <result column="off_shelves_time" property="offShelvesTime" jdbcType="TIMESTAMP" />
+    <result column="is_delete" property="isDelete" jdbcType="INTEGER" />
+    <result column="contact_iphone" property="contactIphone" jdbcType="VARCHAR" />
+    <result column="is_free_deposit" property="isFreeDeposit" jdbcType="VARCHAR" />
+    <result column="audit_status_58" property="auditStatus58" jdbcType="INTEGER" />
+    <result column="reson_id" property="resonId" jdbcType="VARCHAR" />
+    <result column="house_poc_code" property="housePocCode" jdbcType="VARCHAR" />
+    <result column="house_poc_img" property="housePocImg" jdbcType="VARCHAR" />
+    <result column="trading_area" property="tradingArea" jdbcType="VARCHAR" />
+    <result column="is_lift" property="isLift" jdbcType="INTEGER" />
+    <result column="floor_count" property="floorCount" jdbcType="INTEGER" />
+    <result column="floor_house_count" property="floorHouseCount" jdbcType="INTEGER" />
+    <result column="layout_room" property="layoutRoom" jdbcType="INTEGER" />
+    <result column="layout_hall" property="layoutHall" jdbcType="INTEGER" />
+    <result column="layout_toilet" property="layoutToilet" jdbcType="INTEGER" />
+    <result column="pay_num" property="payNum" jdbcType="INTEGER" />
+    <result column="bet_num" property="betNum" jdbcType="INTEGER" />
+    <result column="configuration" property="configuration" jdbcType="VARCHAR" />
+    <result column="rental_demand" property="rentalDemand" jdbcType="VARCHAR" />
+    <result column="house_no" property="houseNo" jdbcType="VARCHAR" />
+    <result column="rental_type" property="rentalType" jdbcType="INTEGER" />
+    <result column="floor_no" property="floorNo" jdbcType="INTEGER" />
+    <result column="change_explain" property="changeExplain" jdbcType="VARCHAR" />
+    <result column="rent_money" property="rentMoney" jdbcType="INTEGER" />
+    <result column="partner_name" property="partnerName" jdbcType="VARCHAR" />
+    <result column="partner_id_card" property="partnerIdCard" jdbcType="VARCHAR" />
+    <result column="contract" property="contract" jdbcType="VARCHAR" />
+    <result column="house_type" property="houseType" jdbcType="INTEGER" />
+    <result column="fire_license" property="fireLicense" jdbcType="VARCHAR" />
+    <result column="fire_license_img" property="fireLicenseImg" jdbcType="VARCHAR" />
+    <result column="house_recumbent" property="houseRecumbent" jdbcType="INTEGER" />
+    <result column="audit_time" property="auditTime" jdbcType="TIMESTAMP" />
+    <result column="register_id" property="registerId" jdbcType="INTEGER" />
+    <result column="seller_id" property="sellerId" jdbcType="INTEGER" />
+    <result column="fp_type" property="fpType" jdbcType="INTEGER" />
+    <result column="community_name" property="communityName" jdbcType="VARCHAR" />
+    <result column="building_name" property="buildingName" jdbcType="VARCHAR" />
+    <result column="house_name" property="houseName" jdbcType="VARCHAR" />
+    <result column="is_housetype_valid" property="isHousetypeValid" jdbcType="INTEGER" />
+    <result column="house_code" property="houseCode" jdbcType="VARCHAR" />
+    <result column="qualification_status" property="qualificationStatus" jdbcType="INTEGER" />
+    <result column="qualification_reason" property="qualificationReason" jdbcType="VARCHAR" />
+    <result column="qualification_time" property="qualificationTime" jdbcType="TIMESTAMP" />
+    <result column="sign_status" property="signStatus" jdbcType="INTEGER" />
+    <result column="sign_time" property="signTime" jdbcType="TIMESTAMP" />
+    <result column="owner_idcard_name" property="ownerIdcardName" jdbcType="VARCHAR" />
+    <result column="owner_idcard_no" property="ownerIdcardNo" jdbcType="VARCHAR" />
+    <result column="backups_time" property="backupsTime" jdbcType="TIMESTAMP" />
+    <result column="is_backups" property="isBackups" jdbcType="INTEGER" />
+    <result column="images" property="images" jdbcType="LONGVARCHAR" />
+    <result column="extendInfo" property="extendinfo" jdbcType="LONGVARCHAR" />
+    <result column="facility" property="facility" jdbcType="LONGVARCHAR" />
+    <result column="common_img_url" property="commonImgUrl" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="ChuHouseApartmentTempResultMap_Column_List" >
+    id, project_id, projectNmae, room_type_id, city, district, street_address, street_num, 
+    address, longitude, latitude, available_room, minPrice, maxPrice, title, name, cover, 
+    structure, area, towards, tag, video, status, source, create_time, create_user_id, 
+    update_time, update_user_id, shelves_time, off_shelves_time, is_delete, contact_iphone, 
+    is_free_deposit, audit_status_58, reson_id, house_poc_code, house_poc_img, trading_area, 
+    is_lift, floor_count, floor_house_count, layout_room, layout_hall, layout_toilet, 
+    pay_num, bet_num, configuration, rental_demand, house_no, rental_type, floor_no, 
+    change_explain, rent_money, partner_name, partner_id_card, contract, house_type, 
+    fire_license, fire_license_img, house_recumbent, audit_time, register_id, seller_id, 
+    fp_type, community_name, building_name, house_name, is_housetype_valid, house_code, 
+    qualification_status, qualification_reason, qualification_time, sign_status, sign_time, 
+    owner_idcard_name, owner_idcard_no, backups_time, is_backups,images, extendInfo, facility, common_img_url
+  </sql> 
+   <!-- 查询所有对象的集合 -->
+  <select id="queryHouseApartmentTempAll" resultMap="ChuHouseApartmentTempResultMap" >
+    select 
+    <include refid="ChuHouseApartmentTempResultMap_Column_List" />
+    from `szaj_house`.`house_apartment_temp`
+  </select>
+  <!-- 查询所有对象的总数 -->
+  <select id="queryHouseApartmentTempTotal" resultType="java.lang.Integer">
+    select   count(1)
+    from `szaj_house`.`house_apartment_temp` 
+  </select>
+  <!-- 删除单个对象 -->
+  <delete id="deleteHouseApartmentTempById" parameterType="cn.web.ajdatasynweb.entity.HouseApartmentTemp">
+  	delete from 
+  		`szaj_house`.`house_apartment_temp`
+  	where  id=#{id}  
+  </delete>
+</mapper>

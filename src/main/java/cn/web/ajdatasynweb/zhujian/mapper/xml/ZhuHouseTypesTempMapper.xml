@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.web.ajdatasynweb.zhujian.mapper.ZhuHouseTypesTempMapper" >
+  <resultMap id="ZhuHouseTypesTempResultMap" type="cn.web.ajdatasynweb.entity.HouseTypesTemp" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="room_type_id" property="roomTypeId" jdbcType="VARCHAR" />
+    <result column="houseId" property="houseid" jdbcType="INTEGER" />
+    <result column="project_id" property="projectId" jdbcType="VARCHAR" />
+    <result column="rent_type" property="rentType" jdbcType="INTEGER" />
+    <result column="min_price" property="minPrice" jdbcType="INTEGER" />
+    <result column="max_price" property="maxPrice" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="cover_image" property="coverImage" jdbcType="VARCHAR" />
+    <result column="detail_images" property="detailImages" jdbcType="VARCHAR" />
+    <result column="structure" property="structure" jdbcType="VARCHAR" />
+    <result column="towards" property="towards" jdbcType="VARCHAR" />
+    <result column="tag" property="tag" jdbcType="VARCHAR" />
+    <result column="facility" property="facility" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="layout_room" property="layoutRoom" jdbcType="INTEGER" />
+    <result column="layout_hall" property="layoutHall" jdbcType="INTEGER" />
+    <result column="layout_toilet" property="layoutToilet" jdbcType="INTEGER" />
+    <result column="pay_period" property="payPeriod" jdbcType="VARCHAR" />
+    <result column="deposit_mode" property="depositMode" jdbcType="VARCHAR" />
+    <result column="is_lift" property="isLift" jdbcType="INTEGER" />
+    <result column="risk_control_status" property="riskControlStatus" jdbcType="INTEGER" />
+    <result column="risk_control_reason" property="riskControlReason" jdbcType="VARCHAR" />
+    <result column="risk_control_time" property="riskControlTime" jdbcType="TIMESTAMP" />
+    <result column="backups_time" property="backupsTime" jdbcType="TIMESTAMP" />
+    <result column="is_backups" property="isBackups" jdbcType="INTEGER" />
+    <result column="extend_info" property="extendInfo" jdbcType="LONGVARCHAR" />
+  </resultMap> 
+  <sql id="ZhuHouseTypesTempResultMap_Column_List" >
+    id, room_type_id, houseId, project_id, rent_type, min_price, max_price, title, name, extend_info,
+    cover_image, detail_images, structure, towards, tag, facility, create_time, update_time, 
+    layout_room, layout_hall, layout_toilet, pay_period, deposit_mode, is_lift, risk_control_status, 
+    risk_control_reason, risk_control_time, backups_time, is_backups
+  </sql>
+  <!-- 添加HouseTypesTemp对象 -->
+  <insert id="insertHouseTypesTemp" parameterType="cn.web.ajdatasynweb.entity.HouseTypesTemp" >
+    insert into `ajdataback`.`house_types_temp` ( room_type_id, houseId, 
+      project_id, rent_type, min_price, 
+      max_price, title, name, 
+      cover_image, detail_images, structure, 
+      towards, tag, facility, 
+      create_time, update_time, layout_room, 
+      layout_hall, layout_toilet, pay_period, 
+      deposit_mode, is_lift, risk_control_status, 
+      risk_control_reason, risk_control_time, backups_time, 
+      is_backups, extend_info)
+    values ( #{roomTypeId,jdbcType=VARCHAR}, #{houseid,jdbcType=INTEGER}, 
+      #{projectId,jdbcType=VARCHAR}, #{rentType,jdbcType=INTEGER}, #{minPrice,jdbcType=INTEGER}, 
+      #{maxPrice,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{coverImage,jdbcType=VARCHAR}, #{detailImages,jdbcType=VARCHAR}, #{structure,jdbcType=VARCHAR}, 
+      #{towards,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, #{facility,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{layoutRoom,jdbcType=INTEGER}, 
+      #{layoutHall,jdbcType=INTEGER}, #{layoutToilet,jdbcType=INTEGER}, #{payPeriod,jdbcType=VARCHAR}, 
+      #{depositMode,jdbcType=VARCHAR}, #{isLift,jdbcType=INTEGER}, #{riskControlStatus,jdbcType=INTEGER}, 
+      #{riskControlReason,jdbcType=VARCHAR}, #{riskControlTime,jdbcType=TIMESTAMP}, #{backupsTime,jdbcType=TIMESTAMP}, 
+      #{isBackups,jdbcType=INTEGER}, #{extendInfo,jdbcType=LONGVARCHAR})
+  </insert>
+</mapper>

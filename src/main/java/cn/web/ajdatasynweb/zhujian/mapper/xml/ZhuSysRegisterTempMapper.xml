@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.web.ajdatasynweb.zhujian.mapper.ZhuSysRegisterTempMapper" >
+  <resultMap id="ZhuSysRegisterTempResultMap" type="cn.web.ajdatasynweb.entity.SysRegisterTemp" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="sys_register_unique_id" property="sysRegisterUniqueId" jdbcType="VARCHAR" />
+    <result column="phone_number" property="phoneNumber" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="operator_name" property="operatorName" jdbcType="VARCHAR" />
+    <result column="operator_card_number" property="operatorCardNumber" jdbcType="VARCHAR" />
+    <result column="card_front_img" property="cardFrontImg" jdbcType="VARCHAR" />
+    <result column="card_back_img" property="cardBackImg" jdbcType="VARCHAR" />
+    <result column="company_name" property="companyName" jdbcType="VARCHAR" />
+    <result column="certificate_social_code" property="certificateSocialCode" jdbcType="VARCHAR" />
+    <result column="company_license_img" property="companyLicenseImg" jdbcType="VARCHAR" />
+    <result column="legal_name" property="legalName" jdbcType="VARCHAR" />
+    <result column="legal_card_number" property="legalCardNumber" jdbcType="VARCHAR" />
+    <result column="legal_phone" property="legalPhone" jdbcType="VARCHAR" />
+    <result column="legal_front_img" property="legalFrontImg" jdbcType="VARCHAR" />
+    <result column="legal_back_img" property="legalBackImg" jdbcType="VARCHAR" />
+    <result column="letter_book_model" property="letterBookModel" jdbcType="VARCHAR" />
+    <result column="is_check_legal" property="isCheckLegal" jdbcType="INTEGER" />
+    <result column="register_type" property="registerType" jdbcType="INTEGER" />
+    <result column="brand_apartment_logo" property="brandApartmentLogo" jdbcType="VARCHAR" />
+    <result column="brand_apartment_name" property="brandApartmentName" jdbcType="VARCHAR" />
+    <result column="brand_apartment_model" property="brandApartmentModel" jdbcType="INTEGER" />
+    <result column="brand_apartment_total" property="brandApartmentTotal" jdbcType="VARCHAR" />
+    <result column="apartment_management_img" property="apartmentManagementImg" jdbcType="VARCHAR" />
+    <result column="apartment_management_name" property="apartmentManagementName" jdbcType="VARCHAR" />
+    <result column="apartment_management_province" property="apartmentManagementProvince" jdbcType="VARCHAR" />
+    <result column="apartment_management_city" property="apartmentManagementCity" jdbcType="VARCHAR" />
+    <result column="apartment_management_area" property="apartmentManagementArea" jdbcType="VARCHAR" />
+    <result column="apartment_management_url" property="apartmentManagementUrl" jdbcType="VARCHAR" />
+    <result column="apartment_management_total" property="apartmentManagementTotal" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="check_type" property="checkType" jdbcType="INTEGER" />
+    <result column="check_time" property="checkTime" jdbcType="TIMESTAMP" />
+    <result column="check_false_total" property="checkFalseTotal" jdbcType="VARCHAR" />
+    <result column="sys_electronic_official_seal" property="sysElectronicOfficialSeal" jdbcType="VARCHAR" />
+    <result column="enterprise_open_name" property="enterpriseOpenName" jdbcType="VARCHAR" />
+    <result column="bank_card_number" property="bankCardNumber" jdbcType="VARCHAR" />
+    <result column="bank_card_address" property="bankCardAddress" jdbcType="VARCHAR" />
+    <result column="is_company" property="isCompany" jdbcType="INTEGER" />
+    <result column="open_province" property="openProvince" jdbcType="VARCHAR" />
+    <result column="open_city" property="openCity" jdbcType="VARCHAR" />
+    <result column="backups_time" property="backupsTime" jdbcType="TIMESTAMP" />
+    <result column="is_backups" property="isBackups" jdbcType="INTEGER" />
+    <result column="deposit_bank" property="depositBank" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="ZhuSysRegisterTempResultMap_Column_List" >
+    id, sys_register_unique_id, phone_number, password, operator_name, operator_card_number, 
+    card_front_img, card_back_img, company_name, certificate_social_code, company_license_img, 
+    legal_name, legal_card_number, legal_phone, legal_front_img, legal_back_img, letter_book_model, 
+    is_check_legal, register_type, brand_apartment_logo, brand_apartment_name, brand_apartment_model, 
+    brand_apartment_total, apartment_management_img, apartment_management_name, apartment_management_province, 
+    apartment_management_city, apartment_management_area, apartment_management_url, apartment_management_total, 
+    create_time, update_time, check_type, check_time, check_false_total, sys_electronic_official_seal, 
+    enterprise_open_name, bank_card_number, bank_card_address, is_company, open_province, 
+    open_city, backups_time, is_backups, deposit_bank
+  </sql>
+  <select id="selectSysRegisterTempByPrimaryKey" resultMap="ZhuSysRegisterTempResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="ZhuSysRegisterTempResultMap_Column_List" />
+    from `szaj_admin`.`sys_register_temp` 
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="querySysRegisterTempAll" resultMap="ZhuSysRegisterTempResultMap" >
+    select 
+    <include refid="ZhuSysRegisterTempResultMap_Column_List" />
+    from `ajdataback`.`sys_register_temp` 
+  </select>
+  <select id="querySysRegisterTempTotal" resultType="java.lang.Integer">
+    select   count(1)
+    from `ajdataback`.`sys_register_temp` 
+  </select>
+  <!-- 添加SysRegisterTemp 对象 -->
+  <insert id="insertSysRegisterTemp" parameterType="cn.web.ajdatasynweb.entity.SysRegisterTemp" >
+    insert into `ajdataback`.`sys_register_temp`  (sys_register_unique_id, phone_number, 
+      password, operator_name, operator_card_number, 
+      card_front_img, card_back_img, company_name, 
+      certificate_social_code, company_license_img, 
+      legal_name, legal_card_number, legal_phone, 
+      legal_front_img, legal_back_img, letter_book_model, 
+      is_check_legal, register_type, brand_apartment_logo, 
+      brand_apartment_name, brand_apartment_model, 
+      brand_apartment_total, apartment_management_img, 
+      apartment_management_name, apartment_management_province, 
+      apartment_management_city, apartment_management_area, 
+      apartment_management_url, apartment_management_total, 
+      create_time, update_time, check_type, 
+      check_time, check_false_total, sys_electronic_official_seal, 
+      enterprise_open_name, bank_card_number, bank_card_address, 
+      is_company, open_province, open_city, 
+      backups_time, is_backups, deposit_bank
+      )
+    values (#{sysRegisterUniqueId,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{operatorName,jdbcType=VARCHAR}, #{operatorCardNumber,jdbcType=VARCHAR}, 
+      #{cardFrontImg,jdbcType=VARCHAR}, #{cardBackImg,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, 
+      #{certificateSocialCode,jdbcType=VARCHAR}, #{companyLicenseImg,jdbcType=VARCHAR}, 
+      #{legalName,jdbcType=VARCHAR}, #{legalCardNumber,jdbcType=VARCHAR}, #{legalPhone,jdbcType=VARCHAR}, 
+      #{legalFrontImg,jdbcType=VARCHAR}, #{legalBackImg,jdbcType=VARCHAR}, #{letterBookModel,jdbcType=VARCHAR}, 
+      #{isCheckLegal,jdbcType=INTEGER}, #{registerType,jdbcType=INTEGER}, #{brandApartmentLogo,jdbcType=VARCHAR}, 
+      #{brandApartmentName,jdbcType=VARCHAR}, #{brandApartmentModel,jdbcType=INTEGER}, 
+      #{brandApartmentTotal,jdbcType=VARCHAR}, #{apartmentManagementImg,jdbcType=VARCHAR}, 
+      #{apartmentManagementName,jdbcType=VARCHAR}, #{apartmentManagementProvince,jdbcType=VARCHAR}, 
+      #{apartmentManagementCity,jdbcType=VARCHAR}, #{apartmentManagementArea,jdbcType=VARCHAR}, 
+      #{apartmentManagementUrl,jdbcType=VARCHAR}, #{apartmentManagementTotal,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{checkType,jdbcType=INTEGER}, 
+      #{checkTime,jdbcType=TIMESTAMP}, #{checkFalseTotal,jdbcType=VARCHAR}, #{sysElectronicOfficialSeal,jdbcType=VARCHAR}, 
+      #{enterpriseOpenName,jdbcType=VARCHAR}, #{bankCardNumber,jdbcType=VARCHAR}, #{bankCardAddress,jdbcType=VARCHAR}, 
+      #{isCompany,jdbcType=INTEGER}, #{openProvince,jdbcType=VARCHAR}, #{openCity,jdbcType=VARCHAR}, 
+      #{backupsTime,jdbcType=TIMESTAMP}, #{isBackups,jdbcType=INTEGER}, #{depositBank,jdbcType=VARCHAR}
+      )
+  </insert>
+</mapper>
