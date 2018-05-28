@@ -29,7 +29,7 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private SysRegisterTempService sysRegisterTempService;
 	
-	@Scheduled(cron="0 0 0/1 * * ?") 
+	@Scheduled(cron="0/30 * * * * ?") 
 	public void schedulingApartmentRoomTempService(){
 		try{
 			long start=System.currentTimeMillis();
@@ -45,7 +45,7 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
 	}
 	
 	
-	@Scheduled(cron="0 0 0/1 * * ?") 
+	@Scheduled(cron="0/30 * * * * ?") 
 	public void schedulingHouseApartmentTempService(){
 		try{
 			long start=System.currentTimeMillis();
@@ -60,7 +60,7 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
 		}
 	}
 	
-	@Scheduled(cron="0 0 0/1 * * ?") 
+	@Scheduled(cron="0/30 * * * * ?") 
 	public void schedulingHouseCentralizationTempService(){
 		try{
 			long start=System.currentTimeMillis();
@@ -75,7 +75,7 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
 		}
 	}
 	
-	@Scheduled(cron="0 0 0/1 * * ?") 
+	@Scheduled(cron="0/30 * * * * ?") 
 	public void schedulingHouseTypesRoomTempService(){
 		try{
 			long start=System.currentTimeMillis();
@@ -91,7 +91,7 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
 	}
 	
 	
-	@Scheduled(cron="0 0 0/1 * * ?") 
+	@Scheduled(cron="0/30 * * * * ?") 
 	public void schedulingHouseTypesTempService(){
 		try{
 			long start=System.currentTimeMillis();
@@ -107,7 +107,7 @@ private Logger logger = LoggerFactory.getLogger(this.getClass());
 	}
 	
 	
-	@Scheduled(cron="0 0 0/1 * * ?") 
+	@Scheduled(cron="0/30 * * * * ?") 
 	public void schedulingQuerySysRegisterTempService(){
 		try{
 			long start=System.currentTimeMillis();

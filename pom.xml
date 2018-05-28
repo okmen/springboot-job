@@ -28,12 +28,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions><!-- 下面这个配置禁止掉本地tomcat -->
+			<!-- <exclusions>下面这个配置禁止掉本地tomcat
 		        <exclusion>
 		            <groupId>org.springframework.boot</groupId>
 		            <artifactId>spring-boot-starter-tomcat</artifactId>
 		        </exclusion>
-		    </exclusions>
+		    </exclusions> -->
 		</dependency>
 		<dependency>
 		    <groupId>org.apache.tomcat</groupId>
