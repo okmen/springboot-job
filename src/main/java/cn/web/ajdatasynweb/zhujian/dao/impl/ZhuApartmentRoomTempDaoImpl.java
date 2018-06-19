@@ -1,5 +1,6 @@
 package cn.web.ajdatasynweb.zhujian.dao.impl;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository; 
 
@@ -16,5 +17,7 @@ public class ZhuApartmentRoomTempDaoImpl implements ZhuApartmentRoomTempDao{
 	public int insertApartmentRoomTemp(ApartmentRoomTemp apartmentRoomTemp) {
 		return zhuApartmentRoomTempMapper.insertApartmentRoomTemp(apartmentRoomTemp);
 	}
+
+	
 
 }

@@ -43,7 +43,7 @@ public class DataSourceZhuJianConfig {
         //添加XML目录
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
-            bean.setMapperLocations(resolver.getResources("classpath:cn/web/ajdatasynweb/zhujian/mapper/xml/*Mapper.xml"));
+            bean.setMapperLocations(resolver.getResources("classpath*:cn/web/ajdatasynweb/zhujian/mapper/xml/*Mapper.xml"));
             return bean.getObject();
         } catch (Exception e) {
             e.printStackTrace();

@@ -48,4 +48,8 @@
       #{offShelvesTime,jdbcType=TIMESTAMP}, #{backupsTime,jdbcType=TIMESTAMP}, #{isBackups,jdbcType=INTEGER}
       )
   </insert>
+  <insert id="addLogs" parameterType="cn.web.ajdatasynweb.entity.Errorlogs">
+    insert into ajdataback.errorlogs (className, logType, msg,createTime )
+    values (#{className,jdbcType=VARCHAR}, #{logType,jdbcType=VARCHAR}, #{msg,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert> 
 </mapper>

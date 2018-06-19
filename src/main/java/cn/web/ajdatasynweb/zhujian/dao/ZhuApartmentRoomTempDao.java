@@ -1,6 +1,7 @@
 package cn.web.ajdatasynweb.zhujian.dao;
 
 import cn.web.ajdatasynweb.entity.ApartmentRoomTemp;
+import cn.web.ajdatasynweb.entity.Errorlogs;
 
 public interface ZhuApartmentRoomTempDao {
 	/**
@@ -9,4 +10,6 @@ public interface ZhuApartmentRoomTempDao {
 	 * @return  int
 	 */
     int insertApartmentRoomTemp(ApartmentRoomTemp apartmentRoomTemp); 
+    
+   
 }

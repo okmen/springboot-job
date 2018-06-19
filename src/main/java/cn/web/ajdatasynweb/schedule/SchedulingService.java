@@ -15,6 +15,7 @@ import cn.web.ajdatasynweb.service.HouseTypesTempService;
 import cn.web.ajdatasynweb.service.SysRegisterTempService; 
 @Component
 public class SchedulingService {
+	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
